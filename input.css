@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+
+
+.nav-menu {
+    @apply font-medium  text-gray-500 mr-6 text-base hover:text-white;
+}
+
+.link-hover{
+    @apply absolute h-1.5 bottom-12 opacity-0  text-center group-hover:opacity-100 bg-secondary-col transition-all duration-100;
+}
+
+
+
+
+
+
+.btn-cookie{
+    @apply bg-primary-col py-4 px-10 text-white;
+}
+
+
+
