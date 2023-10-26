@@ -13,13 +13,23 @@
 }
 
 
-
-
-
-
 .btn-cookie{
     @apply bg-primary-col py-4 px-10 text-white;
+};
+
+.active {
+    @apply  bg-primary-col;
 }
+
+.testimonial-active {
+    @apply flex flex-col;
+}
+/* .testimonial__content{
+    @apply hidden;
+} */
+
+
+
 
 
 

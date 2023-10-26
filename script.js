@@ -42,7 +42,7 @@ navs.addEventListener('click', function(e){
   e.preventDefault()
   console.log(e.target)
 
-  // matching strategy 
+  // matching strategy  or conditions 
   if (e.target.classList.contains('nav-menu')){
     const id = e.target.getAttribute('href'); // Get the 'href' and remove the leading '#' can also use this to specify it 
     console.log(id);
@@ -50,6 +50,38 @@ navs.addEventListener('click', function(e){
   }
  
 })
+
+
+/// slider 
+
+const slider = document.querySelector('.slider')
+const shape= document.querySelectorAll('.circle')
+const testimonialContent = document.querySelectorAll('.testimonial__content')
+
+
+slider.addEventListener('click', function(e){
+  const click = e.target.closest('.circle')
+
+  if (!click) return
+
+  console.log(click)
+
+  shape.forEach(function(el){
+    el.classList.remove('active')
+  })
+
+  testimonialContent.forEach(function(cont){
+    cont.classList.remove('testimonial-active');
+  })
+ 
+
+  click.classList.add('active')
+
+  // document.querySelector(`.testimonial__content--${click.dataset.btn}`).classList.add('testimonial-active')
+  document.querySelector(`.testimonial__content--${click.dataset.btn}`).classList.add('testimonial-active')
+
+})
+
 
 
 
